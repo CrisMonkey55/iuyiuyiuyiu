@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Force | Operations Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Share+Tech&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #ffcc00 ;
+            --danger-red: #ff3e3e;
+            --bg-dark: #05070a;
+            --card-bg: #10141d;
+        }
+        .special-gothic-expanded-one-regular {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .share-tech-regular {
+            font-family: "Share Tech", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .alfa-slab-one-regular {
+            font-family: "Alfa Slab One", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+		
+
+        /* Section Operations */
+        .ops-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-box {
+            text-align: center;
+            margin-bottom: 60px;
+            border-top: 2px solid var(--primary-gold);
+            border-bottom: 2px solid var(--primary-gold);
+            padding: 20px 0;
+            background: rgba(255, 204, 0, 0.05);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .tagline {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Grid Bố cục */
+        .ops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .ops-card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 40px 30px;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .ops-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.1);
+        }
+
+        .ops-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 5px; height: 100%;
+            background: var(--primary-gold);
+        }
+
+        .ops-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .ops-card p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #aaa;
+        }
+
+        /* Badge thông số */
+        .badge {
+            display: inline-block;
+            background: var(--danger-red);
+            color: white;
+            padding: 4px 12px;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+
+        /* Loot Section */
+        .loot-info {
+            margin-top: 60px;
+            background: linear-gradient(90deg, #10141d 0%, #1a1f2b 100%);
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .loot-text { flex: 1; min-width: 300px; }
+        .loot-text h2 { 
+            font-family: 'Oswald', sans-serif; 
+            color: var(--primary-gold);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .extraction-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--primary-gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: 0.3s;
+        }
+
+        .extraction-btn:hover {
+            background: #fff;
+            padding: 15px 50px;
+        }
+
+        @media (max-width : 1501px ){
+            .ops-grid { grid-template-columns: 1fr; }
+        }
+		tieude {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(11, 12, 16, 1)), 
+                        url('Ảnh/z7456522707051_3323c1364ea9737f04e8cff2adb27b64.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+		header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("Ảnh/789.jpg") no-repeat center/cover;
+            border-bottom: 3px solid #ffcc00;
+        }
+		.footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .fontz
+        {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="ops-section">
+        <div class="header-box">
+            <h1 class="special-gothic-expanded-one-regular">OPERATIONS</h1>
+            <p class="tagline">CHIẾN TRƯỜNG KHỐC LIỆT - RỦI RO CỰC ĐẠI</p>
+        </div>
+
+        <div class="ops-grid">
+            <div class="ops-card">
+                <span class="badge">NHIỆM VỤ</span>
+                <h3 class="fontz">Thâm Nhập & Thu Thập</h3>
+                <p class="share-tech-regular">Cùng đội 3 người thâm nhập vào các khu vực bị phong tỏa. Tìm kiếm thùng hàng tiếp tế, tài liệu mật và đặc biệt là các mảnh <b>Mandel Scan</b> quý giá.</p>
+            </div>
+
+            <div class="ops-card">
+                <span class="badge">ĐỐI ĐẦU</span>
+                <h3 class="fontz">PVP PVE Rực Lửa</h3>
+                <p class="share-tech-regular">Không chỉ đối đầu với lính gác AI tinh nhuệ, bạn còn phải dè chừng những tổ đội người chơi khác cũng đang săn tìm tài nguyên như bạn.</p>
+            </div>
+
+            <div class="ops-card">
+                <span class="badge">SỐNG CÒN</span>
+                <h3 class="fontz">Di Tản An Toàn</h3>
+                <p class="share-tech-regular">Chiến thắng chỉ được tính khi bạn chạm tay vào trực thăng di tản. Thất bại đồng nghĩa với việc mất trắng toàn bộ trang bị mang theo.</p>
+            </div>
+        </div>
+
+        <div class="loot-info">
+            <div class="loot-text">
+                <h2 class="fontz">VƯƠNG QUỐC CỦA KẺ SĂN TIỀN THƯỞNG</h2>
+                <p class="share-tech-regular">Mọi vật phẩm thu thập được trong Operations có thể được giao dịch tại <b>Auction House</b> để đổi lấy tiền tệ trong game, giúp bạn xây dựng kho vũ khí tối tân nhất.</p>
+                <a href="web.html" class="extraction-btn">BẮT ĐẦU DI TẢN</a>
+            </div>
+        </div>
+		<div class="footer">
+    <p>&copy; 2026 Delta Force</p>
+</div>
+    </section>
+	
+
+</body>
+</html>
